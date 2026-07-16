@@ -145,3 +145,10 @@ section { padding-block: clamp(48px, 8vw, 90px); }
 .cta-banner { background:linear-gradient(120deg,var(--bg-hero-corner),var(--surface-card)); border:1px solid var(--border-card); border-radius:16px; padding:clamp(32px,6vw,64px); text-align:center; }
 .cta-banner h2 { font-size:clamp(28px,5vw,40px); text-transform:uppercase; margin-bottom:var(--sp-2); }
 .cta-banner p { color:var(--text-body); margin-bottom:var(--sp-4); }
+#localizacao { background:var(--bg-section); }
+.loc-grid { display:grid; grid-template-columns:1fr; gap:var(--sp-3); margin-top:var(--sp-6); }
+.loc-map { width:100%; min-height:300px; border:0; border-radius:var(--radius-card); }
+.loc-card { background:var(--surface-contact); border:1px solid var(--border-card); border-radius:var(--radius-card); padding:var(--sp-4); }
+.loc-logo { height:56px; width:auto; margin-bottom:var(--sp-3); }
+.loc-addr { color:var(--text-body); margin-bottom:var(--sp-4); line-height:1.8; }
+@media (min-width:1024px){ .loc-grid{ grid-template-columns:1.6fr 1fr; } }
