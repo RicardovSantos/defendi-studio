@@ -53,6 +53,7 @@
   --sp-8: 64px;
   --sp-9: 80px;
   --sp-10: 120px;
+  --radius-card: 8px;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -110,3 +111,12 @@ section { padding-block: clamp(48px, 8vw, 90px); }
   .hero-photo{ max-height:600px; }
   .feature-grid{ grid-template-columns:repeat(4,1fr); }
 }
+.services-grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-3); margin-top: var(--sp-6); }
+.service-card { background: var(--surface-card); border: 1px solid var(--border-card); border-radius: var(--radius-card); overflow: hidden; }
+.service-thumb { aspect-ratio: 16/10; background: linear-gradient(135deg, var(--bg-hero-corner), var(--surface-card)); }
+.service-body { padding: var(--sp-3); }
+.service-body h3 { text-transform: uppercase; font-family: var(--font-body); font-size: 16px; letter-spacing: 1.5px; font-weight: 600; color: var(--text-title); margin-bottom: var(--sp-1); }
+.service-body p { font-size: 14px; color: var(--text-muted); margin-bottom: var(--sp-3); }
+.btn-sm { padding: 10px 22px; font-size: 11px; border-radius: 6px; }
+@media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
