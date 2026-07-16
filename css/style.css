@@ -132,3 +132,8 @@ section { padding-block: clamp(48px, 8vw, 90px); }
 .why-card p { font-size:13px; color:var(--text-muted); }
 @media (min-width:640px){ .why-grid{ grid-template-columns:repeat(2,1fr); } }
 @media (min-width:1024px){ .why-grid{ grid-template-columns:repeat(5,1fr); } }
+.gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-1); margin-top:var(--sp-6); }
+.gallery-item { aspect-ratio:1; border-radius:var(--radius-img); background:linear-gradient(135deg,var(--surface-card),var(--bg-hero-corner)); border:1px solid var(--border-card); }
+.center-cta { text-align:center; margin-top:var(--sp-4); }
+@media (min-width:768px){ .gallery{ grid-template-columns:repeat(3,1fr); } }
+@media (min-width:1024px){ .gallery{ grid-template-columns:repeat(6,1fr); } }
