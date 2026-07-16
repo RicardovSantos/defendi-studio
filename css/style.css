@@ -141,3 +141,7 @@ section { padding-block: clamp(48px, 8vw, 90px); }
 .testi-card { background:var(--surface-testimonial); border:1px solid var(--border-card); border-radius:var(--radius-card); padding:var(--sp-4); max-width:520px; text-align:center; }
 .testi-empty { color:var(--text-body); margin-bottom:var(--sp-2); }
 .testi-link { color:var(--primary); font-size:14px; font-weight:600; }
+.cta-banner-wrap { background:var(--bg-section); }
+.cta-banner { background:linear-gradient(120deg,var(--bg-hero-corner),var(--surface-card)); border:1px solid var(--border-card); border-radius:16px; padding:clamp(32px,6vw,64px); text-align:center; }
+.cta-banner h2 { font-size:clamp(28px,5vw,40px); text-transform:uppercase; margin-bottom:var(--sp-2); }
+.cta-banner p { color:var(--text-body); margin-bottom:var(--sp-4); }
