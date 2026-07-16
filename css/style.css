@@ -76,3 +76,16 @@ h1,h2,h3 { font-family: var(--font-display); color: var(--text-heading); line-he
 }
 .btn-primary:hover { filter:brightness(1.25); }
 section { padding-block: clamp(48px, 8vw, 90px); }
+.site-header { position:sticky; top:0; z-index:100; background:var(--bg-darkest); border-bottom:1px solid var(--divider); }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding-block:12px; }
+.brand-logo { height:44px; width:auto; }
+.nav-toggle { background:none; border:none; display:flex; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
+.nav-toggle span { width:24px; height:2px; background:var(--text-heading); transition:.2s; }
+.site-nav { display:none; }               /* mobile: escondido até .open */
+.site-nav.open { display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:var(--bg-darkest); padding:var(--sp-3); gap:var(--sp-2); border-bottom:1px solid var(--divider); }
+.site-nav a { text-transform:uppercase; letter-spacing:1.5px; font-size:13px; font-weight:500; color:var(--text-body); }
+.nav-cta { color:var(--btn-text) !important; text-align:center; }
+@media (min-width:1024px){
+  .nav-toggle{ display:none; }
+  .site-nav{ display:flex; align-items:center; gap:var(--sp-3); position:static; padding:0; background:none; }
+}
