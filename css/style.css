@@ -55,8 +55,8 @@
   --radius-img: 6px;
 }
 html { scroll-behavior: smooth; }
-:target { scroll-margin-top: 80px; }
-section[id], header[id] { scroll-margin-top: 80px; }
+:target { scroll-margin-top: 100px; }
+section[id], header[id] { scroll-margin-top: 100px; }
 body {
   font-family: var(--font-body);
   background: var(--bg-darkest);
