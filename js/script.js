@@ -12,14 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.setAttribute('aria-expanded', 'false');
   }));
 
-  initServicesCarousel();
+  initCarousel('.services-carousel', 'servicesTrack');
+  initCarousel('.testimonials-carousel', 'testimonialsTrack');
+  initTestimonialExpand();
 });
 
-// Carrossel "Nossos Serviços": sempre 3 cards por vez (2 no tablet, 1 no mobile),
+// Carrossel genérico: sempre 3 cards por vez (2 no tablet, 1 no mobile),
 // avanço automático e loop infinito via clones do início da lista.
-function initServicesCarousel() {
-  const carousel = document.querySelector('.services-carousel');
-  const track = document.getElementById('servicesTrack');
+function initCarousel(carouselSelector, trackId) {
+  const carousel = document.querySelector(carouselSelector);
+  const track = document.getElementById(trackId);
   if (!carousel || !track) return;
 
   const prevBtn = carousel.querySelector('.carousel-prev');
@@ -110,4 +112,41 @@ function initServicesCarousel() {
   setupClones();
   goTo(0, false);
   startAutoplay();
+}
+
+// Depoimentos: mostra "Ver mais" só nos cards cujo texto realmente é cortado
+// pelo line-clamp, e alterna a expansão ao clicar (delegado, funciona nos clones do carrossel).
+function initTestimonialExpand() {
+  function updateTruncation() {
+    document.querySelectorAll('.testimonial-card').forEach(card => {
+      const text = card.querySelector('.testimonial-text');
+      const btn = card.querySelector('.testimonial-more');
+      if (!text || !btn) return;
+      text.classList.remove('is-expanded');
+      btn.textContent = 'Ver mais';
+      const truncated = text.scrollHeight > text.clientHeight + 2;
+      btn.style.display = truncated ? 'inline-block' : 'none';
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.testimonial-more');
+    if (!btn) return;
+    const text = btn.closest('.testimonial-card').querySelector('.testimonial-text');
+    const expanded = text.classList.toggle('is-expanded');
+    btn.textContent = expanded ? 'Ver menos' : 'Ver mais';
+  });
+
+  updateTruncation();
+  // recalcula depois que fontes/imagens terminam de carregar (podem reflowar o texto)
+  window.addEventListener('load', updateTruncation);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(updateTruncation);
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updateTruncation, 350);
+  });
 }
