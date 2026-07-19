@@ -54,9 +54,9 @@ Interfone: 102, Sala 02
 
     A remoção de tatuagem e micropigmentação é um procedimento a laser que elimina os pigmentos da pele de forma gradual, segura e eficaz. Ideal para quem deseja apagar ou clarear tatuagens e micropigmentações com um tratamento personalizado para cada caso.
 
-**lobuloplastia não cirúrgica**
+**Lobuloplastia não cirúrgica**
 
-    é um procedimento minimamente invasivo indicado para corrigir lóbulos rasgados ou semirrasgados, sem a necessidade de cirurgia. Com uma técnica exclusiva, é possível restaurar a estética do lóbulo de forma segura, preservando sua aparência natural e permitindo que você volte a usar brincos com mais confiança.
+    Procedimento minimamente invasivo para corrigir lóbulos rasgados ou semirrasgados, restaurando sua aparência de forma segura e natural, sem cirurgia. Volte a usar brincos com mais confiança.
 
 **bioflex**
 

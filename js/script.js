@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initCarousel('.services-carousel', 'servicesTrack');
   initCarousel('.testimonials-carousel', 'testimonialsTrack');
+  initCarousel('.gallery-carousel', 'galleryTrack');
   initTestimonialExpand();
 });
 

@@ -109,18 +109,28 @@
             <!-- TODO: foto real do serviço -->
           </div>
           <div class="service-body">
-            <h3>Lobuloplastia</h3>
-            <p>Correção de lóbulos rasgados ou alargados, com resultado natural e seguro.</p>
+            <h3>Lobuloplastia Não Cirúrgica</h3>
+            <p>Procedimento minimamente invasivo para corrigir lóbulos rasgados ou semirrasgados, restaurando sua aparência de forma segura e natural, sem cirurgia. Volte a usar brincos com mais confiança.</p>
             <a href="https://wa.me/5511993977462" class="btn-primary btn-sm" target="_blank" rel="noopener">Saiba mais</a>
           </div>
         </article>
         <article class="service-card">
           <div class="service-thumb">
-            <!-- TODO: foto real do serviço -->
+            <img src="img/Remocao-de-tatuagem.PNG" alt="Remoção de tatuagem — antes e depois" loading="lazy">
           </div>
           <div class="service-body">
             <h3>Remoção de Tatuagem</h3>
-            <p>Remoção segura e eficaz, respeitando a sua pele.</p>
+            <p>A remoção de tatuagem e micropigmentação a laser elimina os pigmentos da pele de forma gradual, segura e eficaz. Ideal para apagar ou clarear tatuagens e micropigmentações com um tratamento personalizado.</p>
+            <a href="https://wa.me/5511993977462" class="btn-primary btn-sm" target="_blank" rel="noopener">Saiba mais</a>
+          </div>
+        </article>
+        <article class="service-card">
+          <div class="service-thumb">
+            <img src="img/Remocao de micropigmentacao.png" alt="Remoção de micropigmentação — antes e depois" loading="lazy">
+          </div>
+          <div class="service-body">
+            <h3>Remoção de Micropigmentação</h3>
+            <p>Micropigmentação a laser elimina os pigmentos da pele.</p>
             <a href="https://wa.me/5511993977462" class="btn-primary btn-sm" target="_blank" rel="noopener">Saiba mais</a>
           </div>
         </article>
@@ -143,11 +153,31 @@
     </div>
   </section>
   <section id="cursos" class="cursos">
-    <div class="container cursos-inner">
-      <div class="cursos-copy">
-        <p class="eyebrow">Formação Profissional</p>
-        <h2>Curso de Piercing</h2>
-        <p>Aprenda a técnica com quem tem experiência de verdade. Método indolor, biossegurança e joias premium — do básico ao profissional. Fale no WhatsApp e garanta sua vaga.</p>
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Formação Profissional</p>
+      <h2 class="section-title">Nossos Cursos</h2>
+      <div class="cursos-grid">
+        <div class="curso-card">
+          <h3>Body Piercing Iniciante</h3>
+          <p class="curso-badge">Certificado · Acompanhamento · Grupo de apoio</p>
+        </div>
+        <div class="curso-card">
+          <h3>Método Defendi Indolor</h3>
+          <p class="curso-badge">Certificado · Acompanhamento · Grupo de apoio</p>
+        </div>
+        <div class="curso-card">
+          <h3>Lobuloplastia Não Cirúrgica (LOB)</h3>
+          <p class="curso-badge">Certificado · Acompanhamento · Grupo de apoio</p>
+        </div>
+        <div class="curso-card">
+          <h3>Furo de Bebê Humanizado</h3>
+          <p class="curso-badge">Certificado · Acompanhamento · Grupo de apoio</p>
+        </div>
+      </div>
+      <div class="cursos-combo">
+        <p class="eyebrow">Combo Completo</p>
+        <h3>Todos os cursos em um só combo</h3>
+        <p>Você se prepara para atender adultos, crianças e bebês, ampliando suas oportunidades e entrando no mercado com um grande diferencial. Também é possível fazer as formações separadamente, começando pela técnica que mais faz sentido para você.</p>
         <a href="https://wa.me/5511993977462" class="btn-primary" target="_blank" rel="noopener">Quero saber mais</a>
       </div>
     </div>
@@ -188,13 +218,23 @@
     <div class="container">
       <h2 class="section-title">Trabalhos Realizados</h2>
       <!-- TODO: substituir os .gallery-item por <img> das fotos reais da cliente -->
-      <div class="gallery">
+      <div class="gallery-carousel">
+        <button class="carousel-arrow carousel-prev" aria-label="Trabalho anterior" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+        <div class="gallery-viewport">
+          <div class="gallery" id="galleryTrack">
+        <div class="gallery-item"><img src="img/tabalho-1.png" alt="Trabalho realizado — remoção de tatuagem" loading="lazy"></div>
+        <div class="gallery-item"><img src="img/trabalho-2.png" alt="Trabalho realizado — piercing na orelha" loading="lazy"></div>
         <div class="gallery-item"></div>
         <div class="gallery-item"></div>
         <div class="gallery-item"></div>
         <div class="gallery-item"></div>
-        <div class="gallery-item"></div>
-        <div class="gallery-item"></div>
+          </div>
+        </div>
+        <button class="carousel-arrow carousel-next" aria-label="Próximo trabalho" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path></svg>
+        </button>
       </div>
       <div class="center-cta"><a href="https://www.instagram.com/defendi.larissa" class="btn-primary" target="_blank" rel="noopener">Ver mais no Instagram</a></div>
     </div>
@@ -209,7 +249,7 @@
         <div class="testimonials-viewport">
           <div class="testimonials-grid" id="testimonialsTrack">
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Adorei o atendimento da equipe da Lari! Desde o primeiro atendimento pelo whatsapp até o dia da perfuração! Foi um experiência incrível, eu indico de olhos fechados! Já estou planejando os próximos furinhos! 🥰</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -221,7 +261,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Excelente experiência no Defendi Studio!! Fui por indicação de uma amiga que fez um piercing com a Larissa e, segundo ela, faziam outros procedimentos além de piercing. Inicialmente eu fiz lobuloplastia não cirúrgica (peeling químico) e fui extremamente bem atendida já no 1o contato, bem como no pós procedimento. A técnica promete zero dor e cumpre! São muito atenciosas, meus novos furos estão, finalmente, restaurados e bem posicionados e eu AMEI!!! Super recomendo!!!!</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -233,7 +273,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Só elogios, Lari uma profissional muito dedicada, atenciosa e eu estava morrendo de medo de doer ou dar algum problema a mais e foi super tranquilo e muito rápido, e qualquer dúvida que eu tinha as meninas ali eram super atenciosas e educadas. Do atendimento em whatsapp até o presencial foi perfeito em tudo, perfeitas demais 🥰❤️</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -245,7 +285,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Atendimento excelente desde o agendamento pelo WhatsApp até a perfuração. Profissionais super atenciosos e competentes. Eu realmente senti absolutamente NADA de dor durante o procedimento e o pós também está sendo super tranquilo. Espaço super organizado e limpo. Indico de olhos fechados. Fiquei super satisfeita!</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -257,7 +297,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Eu confesso q estava aflita em sentir dor rs, mas tudo é mto rapido e tranquilo e confesso que estou impressionada, tenho a sensação que nao furei a orelha de tão tranquilo que esta. Zero dor. Voltarei com certeza.</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -269,7 +309,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Amo o trabalho da Larissa!!! Não vou em outro profissional de jeito nenhum.</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -281,7 +321,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Amei o espaço, o atendimento desde a chegada até a finalização pela equipe toda. Todos aparelhos esterilizados com muito cuidado. A Larissa é maravilhosa, muito profissional e segura do que faz. Estava com medo de ter dor mas não senti nada. Vão sem medo! Super recomendo</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -293,7 +333,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Se tivesse 10 estrelas eu daria 11! A Larissa é maravilhosa, um encanto de pessoa e profissional, me deixou muito segura e a vontade desde a primeira conversa pelo WhatsApp. Explica tão bem o procedimento te dando mais confiança, e sem contar o atendimento de princesa! O estúdio é uma graça!</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -305,7 +345,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Atendimento maravilhoso! A Lari é simplesmente incrível no atendimento, explica todos os detalhes, acalma a gente rs e sem contar no método indolor que é surreal, você não sente nada no momento da aplicação. O studio tem uma ótima localização, muitoooo limpinho e organizado. É a segunda vez que coloco um piercing e só confio na Lari!</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -317,7 +357,7 @@
           </div>
         </article>
         <article class="testimonial-card">
-          <p class="testimonial-quote">"</p>
+          <span class="testimonial-quote" aria-hidden="true"></span>
           <p class="testimonial-text">Experiência incrível! A Lari é extremamente acolhedora e maravilhosa, trabalho impecável. Nunca tive problemas com piercing desde que comecei a fazer com ela.</p>
           <button class="testimonial-more" type="button">Ver mais</button>
           <div class="testimonial-footer">
@@ -368,7 +408,7 @@
         <p>Beleza, arte e segurança em cada detalhe.</p>
       </div>
       <div><h4>Navegação</h4><a href="#servicos">Serviços</a><a href="#cursos">Cursos</a><a href="#sobre">Sobre</a><a href="#trabalhos">Trabalhos</a><a href="#localizacao">Localização</a></div>
-      <div><h4>Serviços</h4><a href="#servicos">Piercing</a><a href="#servicos">Lobuloplastia</a><a href="#servicos">Remoção de Tatuagem</a><a href="#servicos">Primeiro Furo em Bebê</a><a href="#cursos">Cursos</a></div>
+      <div><h4>Serviços</h4><a href="#servicos">Piercing</a><a href="#servicos">Lobuloplastia Não Cirúrgica</a><a href="#servicos">Remoção de Tatuagem</a><a href="#servicos">Remoção de Micropigmentação</a><a href="#servicos">Primeiro Furo em Bebê</a><a href="#cursos">Cursos</a></div>
       <div class="footer-contact">
         <h4>Contato</h4>
         <a href="https://wa.me/5511993977462" target="_blank" rel="noopener">WhatsApp: (11) 99397-7462</a>
