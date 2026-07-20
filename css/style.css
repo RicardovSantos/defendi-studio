@@ -173,7 +173,6 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .hero-text { color:var(--text-body); font-size:16px; max-width:44ch; margin-bottom:var(--sp-4); }
 .hero-features-inline { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-3); margin-top:var(--sp-6); max-width:420px; margin-inline:auto; }
 .feature { display:flex; flex-direction:column; align-items:center; gap:var(--sp-1); font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--text-body); }
-.feature-desc { text-transform:none; letter-spacing:normal; font-size:10px; color:var(--text-muted); text-align:center; }
 .feature svg, .why-card svg {
   stroke-width: 1.5;
   stroke: rgba(255,210,230,.80);
