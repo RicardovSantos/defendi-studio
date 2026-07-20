@@ -169,7 +169,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .hero-logo-mask { position:relative; display:inline-block; line-height:0; margin-bottom:var(--sp-3); }
 .hero-logo { height:clamp(130px, 15vw, 190px); width:auto; }
 .hero-tagline { text-transform:uppercase; letter-spacing:4px; font-size:14px; color:var(--text-muted); margin-bottom:var(--sp-4); }
-.hero-title { font-size:clamp(30px,5.8vw,54px); max-width:16ch; margin-bottom:var(--sp-3); }
+.hero-title { font-size:clamp(30px,5.8vw,54px); max-width:26ch; margin-bottom:var(--sp-3); }
 .hero-text { color:var(--text-body); font-size:16px; max-width:44ch; margin-bottom:var(--sp-4); }
 .hero-features-inline { display:grid; grid-template-columns:repeat(2,1fr); gap:var(--sp-3); margin-top:var(--sp-6); max-width:420px; margin-inline:auto; }
 .feature { display:flex; flex-direction:column; align-items:center; gap:var(--sp-1); font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--text-body); }
