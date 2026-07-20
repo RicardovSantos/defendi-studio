@@ -221,9 +221,9 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .service-card:hover { transform:translateY(-6px) scale(1.015); box-shadow: var(--glass-shadow-hover); }
 .service-thumb { flex:0 0 42%; background: linear-gradient(135deg, var(--bg-hero-corner), var(--surface-card)); overflow:hidden; }
 .service-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
-.service-body { flex:1; padding: 22px; display:flex; flex-direction:column; }
-.service-body h3 { text-transform: uppercase; font-family: var(--font-body); font-size: 18px; letter-spacing: 1.5px; font-weight: 600; color: var(--text-title); margin-bottom: var(--sp-1); }
-.service-body p { font-size: 13px; line-height:1.7; color: var(--text-muted); margin-bottom: var(--sp-3); }
+.service-body { flex:1; min-width:0; padding: 22px; display:flex; flex-direction:column; }
+.service-body h3 { text-transform: uppercase; font-family: var(--font-body); font-size: 18px; letter-spacing: 1.5px; font-weight: 600; color: var(--text-title); margin-bottom: var(--sp-1); overflow-wrap:break-word; }
+.service-body p { font-size: 13px; line-height:1.7; color: var(--text-muted); margin-bottom: var(--sp-3); overflow-wrap:break-word; }
 .btn-sm { align-self:flex-start; margin-top:auto; padding: 10px 22px; font-size: 11px; }
 .carousel-arrow {
   position:absolute; top:50%; transform:translateY(-50%);
