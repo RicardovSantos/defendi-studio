@@ -309,7 +309,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .gallery-viewport { overflow:hidden; }
 .gallery { display:flex; gap:8px; transition: transform .6s cubic-bezier(.65,0,.35,1); }
 .gallery-item {
-  flex:0 0 100%;
+  flex:0 0 70%;
   aspect-ratio:1; border-radius:8px; overflow:hidden;
   background:linear-gradient(135deg,var(--surface-card),var(--bg-hero-corner));
   border:1px solid var(--border-card);
