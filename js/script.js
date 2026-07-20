@@ -16,7 +16,45 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel('.testimonials-carousel', 'testimonialsTrack');
   initCarousel('.gallery-carousel', 'galleryTrack');
   initTestimonialExpand();
+  initLightbox('earGuideTrigger', 'earGuideLightbox', 'earGuideClose');
 });
+
+// Abre/fecha uma imagem em tela cheia: clique no gatilho abre, clique no X,
+// clique fora da imagem ou tecla Esc fecha.
+function initLightbox(triggerId, lightboxId, closeId) {
+  const trigger = document.getElementById(triggerId);
+  const lightbox = document.getElementById(lightboxId);
+  const closeBtn = document.getElementById(closeId);
+  if (!trigger || !lightbox || !closeBtn) return;
+
+  // O botão flutuante do WhatsApp fica por cima do overlay em alguns
+  // navegadores mesmo com z-index menor, então escondemos ele manualmente.
+  const waFloat = document.querySelector('.whatsapp-float');
+
+  function open() {
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    if (waFloat) waFloat.style.visibility = 'hidden';
+    closeBtn.focus();
+  }
+  function close() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (waFloat) waFloat.style.visibility = '';
+    trigger.focus();
+  }
+
+  trigger.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) close();
+  });
+}
 
 // Carrossel genérico: sempre 3 cards por vez (2 no tablet, 1 no mobile),
 // avanço automático e loop infinito via clones do início da lista.
