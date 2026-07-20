@@ -399,6 +399,9 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 @media (max-width:767px){
   .cta-banner { background: url("../img/cta-background-mobile.jpg") center/cover no-repeat, #1C0F16; }
 }
+@media (max-width:399px){
+  .cta-banner { background: url("../img/cta-background-mobile-sm.jpg") center/cover no-repeat, #1C0F16; }
+}
 @media (min-width:768px) and (max-width:1023px){
   .cta-banner { background: url("../img/cta-background-tablet-sm.jpg") center/cover no-repeat, #1C0F16; }
 }
