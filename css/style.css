@@ -385,18 +385,17 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .testi-link { color:var(--primary); font-size:14px; font-weight:600; }
 .cta-banner {
   position:relative; overflow:hidden;
-  background: var(--glass-card-bg);
+  background: url("../img/cta-background.jpg") center/cover no-repeat, var(--glass-card-bg);
   border:1px solid var(--glass-border); border-radius:16px;
   box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  padding:clamp(32px,6vw,64px); text-align:center;
+  padding:clamp(32px,6vw,64px); text-align:left;
 }
 .cta-banner::before {
   content:""; position:absolute; inset:0; pointer-events:none;
-  background: linear-gradient(135deg, rgba(255,255,255,.08), transparent 35%, transparent 65%, rgba(255,255,255,.03));
-  opacity:.55;
+  background: linear-gradient(90deg, rgba(16,7,11,.55) 0%, rgba(16,7,11,.88) 38%, rgba(16,7,11,.88) 100%);
 }
 .cta-banner h2, .cta-banner p, .cta-banner .btn-primary { position:relative; z-index:1; }
+.cta-content { max-width:520px; }
 .cta-banner h2 { font-size:clamp(28px,5vw,40px); text-transform:uppercase; margin-bottom:var(--sp-2); }
 .cta-banner p { color:var(--text-body); margin-bottom:var(--sp-4); }
 #localizacao { position:relative; background:linear-gradient(180deg,#14090E,#10070B); }
