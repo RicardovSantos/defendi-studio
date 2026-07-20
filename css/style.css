@@ -261,10 +261,11 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 }
 .cursos-list { position:relative; z-index:1; list-style:none; }
 .cursos-list li {
-  text-align:center;
+  text-align:left;
   padding:20px 2px; border-bottom:1px solid var(--divider);
 }
 .cursos-list li:last-child { border-bottom:none; }
+@media (min-width:1024px){ .cursos-list li { text-align:center; } }
 .cursos-list-icon {
   display:inline-block; vertical-align:middle; margin-right:16px;
   width:9px; height:9px; border-radius:2px;
