@@ -363,7 +363,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 }
 .testimonial-text.is-expanded { -webkit-line-clamp:unset; overflow:visible; }
 .testimonial-more {
-  display:none; align-self:flex-start; margin:8px 0 12px; padding:0;
+  display:none; align-self:flex-end; margin:8px 0 12px; padding:0;
   background:none; border:none; position:relative; z-index:1;
   color:var(--primary); font-size:13px; font-weight:600; letter-spacing:.3px;
   text-decoration:underline; text-underline-offset:2px; cursor:pointer;
