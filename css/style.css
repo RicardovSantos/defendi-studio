@@ -261,12 +261,10 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 }
 .cursos-list { position:relative; z-index:1; list-style:none; }
 .cursos-list li {
-  display:flex; align-items:center; gap:16px;
+  display:flex; align-items:center; justify-content:center; gap:16px;
   padding:20px 2px; border-bottom:1px solid var(--divider);
-  transition: padding-left .3s;
 }
 .cursos-list li:last-child { border-bottom:none; }
-.cursos-list li:hover { padding-left:8px; }
 .cursos-list-icon {
   flex:0 0 auto; width:9px; height:9px; border-radius:2px;
   background:var(--primary); transform:rotate(45deg);
