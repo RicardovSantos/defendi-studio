@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel('.gallery-carousel', 'galleryTrack');
   initTestimonialExpand();
   initLightbox('earGuideTrigger', 'earGuideLightbox', 'earGuideClose');
+  initLightbox('colorCatalogTrigger', 'colorCatalogLightbox', 'colorCatalogClose');
 });
 
 // Abre/fecha uma imagem em tela cheia: clique no gatilho abre, clique no X,
