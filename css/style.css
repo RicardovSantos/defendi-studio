@@ -189,7 +189,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
   .hero-photo img { object-position: 40% top; }
   .hero-inner::before {
     content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
-    background: linear-gradient(180deg, rgba(16,6,10,.4) 0%, rgba(16,6,10,.5) 45%, rgba(16,6,10,.68) 100%);
+    background: linear-gradient(180deg, rgba(16,6,10,.28) 0%, rgba(16,6,10,.35) 45%, rgba(16,6,10,.5) 100%);
   }
   .hero-copy { position:relative; z-index:2; }
   .hero-title { margin-top:clamp(120px,28vw,200px); }
@@ -439,7 +439,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 .cta-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:85% 15%; display:block; }
 .cta-banner::before {
   content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
-  background: linear-gradient(180deg, rgba(16,6,10,.4) 0%, rgba(16,6,10,.5) 45%, rgba(16,6,10,.68) 100%);
+  background: linear-gradient(180deg, rgba(16,6,10,.28) 0%, rgba(16,6,10,.35) 45%, rgba(16,6,10,.5) 100%);
 }
 .cta-content { position:relative; z-index:2; max-width:520px; margin-inline:auto; text-align:center; padding:clamp(32px,6vw,64px); }
 .cta-banner h2 { font-size:clamp(28px,5vw,40px); text-transform:uppercase; margin-bottom:var(--sp-2); }
@@ -447,7 +447,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 @media (min-width:1024px){
   .cta-banner { grid-template-columns:1.05fr 0.95fr; min-height: clamp(420px, 38vw, 520px); }
   .cta-photo { position:relative; inset:auto; order:2; height:100%; }
-  .cta-banner::before { background: linear-gradient(90deg, rgba(16,6,10,.85) 0%, rgba(16,6,10,.5) 38%, transparent 55%); }
+  .cta-banner::before { background: linear-gradient(90deg, rgba(16,6,10,.65) 0%, rgba(16,6,10,.35) 38%, transparent 55%); }
   .cta-content { margin-inline:0; padding-inline-start:clamp(32px,6vw,64px); }
 }
 .shop-banner {
