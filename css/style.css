@@ -45,8 +45,8 @@
   --btn-glass-shadow-hover: 0 0 35px rgba(255,70,130,.35);
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
 
   /* Layout / Spacing */
   --container: 1320px;
