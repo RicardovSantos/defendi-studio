@@ -395,7 +395,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
   height:clamp(20px, 2.2vw, 26px);
   opacity:.85;
   background-color:#9B5A6D;
-  -webkit-mask-image:url('../img/aspa.png'); mask-image:url('../img/aspa.png');
+  -webkit-mask-image:url('../img/aspa.webp'); mask-image:url('../img/aspa.webp');
   -webkit-mask-size:contain; mask-size:contain;
   -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
   -webkit-mask-position:left center; mask-position:left center;
@@ -466,7 +466,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
   position:relative; overflow:hidden; display:block;
   min-height: 320px;
   display:flex; align-items:center; justify-content:center;
-  background: url("../img/loja-piercing-bg-desktop.png") center/cover no-repeat, #1C0F16;
+  background: url("../img/loja-piercing-bg-desktop.webp") center/cover no-repeat, #1C0F16;
   border:1px solid var(--glass-border); border-radius:16px;
   box-shadow: var(--glass-shadow);
   padding:clamp(32px,6vw,64px); text-align:center;
@@ -474,7 +474,7 @@ section { padding-block: clamp(48px, 8vw, 80px); }
 }
 .shop-banner:hover { box-shadow: var(--glass-shadow-hover); }
 @media (max-width:767px){
-  .shop-banner { background: url("../img/loja-piercing-bg-mobile.png") center/cover no-repeat, #1C0F16; }
+  .shop-banner { background: url("../img/loja-piercing-bg-mobile.webp") center/cover no-repeat, #1C0F16; }
 }
 .shop-banner::before {
   content:""; position:absolute; inset:0;
