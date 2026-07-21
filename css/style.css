@@ -78,6 +78,15 @@ a { color: inherit; text-decoration: none; }
 h1,h2,h3 { font-family: var(--font-display); color: var(--text-heading); line-height: 1.2; font-weight: 500; }
 .section-title { text-align: center; text-transform: uppercase; letter-spacing: 3px; color: var(--text-section-heading); font-size: clamp(24px,4vw,30px); }
 .section-title::after { content:""; display:block; width:40px; height:2px; background:var(--primary); margin:12px auto 0; }
+.reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity:1; transform:translateY(0); }
+.why-grid .why-card.reveal:nth-child(2) { transition-delay:.08s; }
+.why-grid .why-card.reveal:nth-child(3) { transition-delay:.16s; }
+.why-grid .why-card.reveal:nth-child(4) { transition-delay:.24s; }
+.why-grid .why-card.reveal:nth-child(5) { transition-delay:.32s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity:1; transform:none; transition:none; }
+}
 .btn-primary {
   position:relative; overflow:hidden;
   display:inline-block; background:var(--btn-glass-bg); color:var(--btn-text);

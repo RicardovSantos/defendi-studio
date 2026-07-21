@@ -18,7 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
   initTestimonialExpand();
   initLightbox('earGuideTrigger', 'earGuideLightbox', 'earGuideClose');
   initLightbox('colorCatalogTrigger', 'colorCatalogLightbox', 'colorCatalogClose');
+  initScrollReveal();
 });
+
+// Anima elementos com a classe .reveal (fade + leve deslocamento) na primeira
+// vez que entram na tela ao rolar a página. Respeita prefers-reduced-motion.
+function initScrollReveal() {
+  const items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  items.forEach(item => observer.observe(item));
+}
 
 // Abre/fecha uma imagem em tela cheia: clique no gatilho abre, clique no X,
 // clique fora da imagem ou tecla Esc fecha.
