@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defendi Studio — Teste de Tipografia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-main: #0a0407;
+    --surface: #2b111b;
+    --border: #4a2130;
+    --text-heading: #f5e6eb;
+    --text-body: #cbb3bb;
+    --accent: #d4a3b3;
+    --btn-grad: linear-gradient(135deg, #5e2137, #3b1422);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-body);
+    padding-top: 210px;
+  }
+
+  /* ---------- Barra fixa de controles ---------- */
+  .controls {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,4,7,.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end;
+  }
+  .control-group { display: flex; flex-direction: column; gap: 6px; min-width: 160px; flex: 1; }
+  .control-group.wide { flex: 2; min-width: 260px; }
+  .control-group label {
+    font: 600 11px 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--accent);
+  }
+  .control-group select,
+  .control-group input[type="text"] {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text-heading); padding: 9px 12px; font: 14px 'Plus Jakarta Sans', sans-serif;
+  }
+  .control-group input[type="range"] { accent-color: var(--accent); }
+  .control-group .range-value { font: 12px 'Plus Jakarta Sans', sans-serif; color: var(--text-body); }
+  .controls-title {
+    width: 100%; font: 600 13px 'Plus Jakarta Sans', sans-serif; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-heading); margin-bottom: 4px;
+  }
+
+  /* ---------- Showcase principal (reage aos controles) ---------- */
+  .showcase { padding: 60px 24px 20px; }
+  .mock-banner {
+    max-width: 1100px; margin: 0 auto 40px; border-radius: 16px; overflow: hidden;
+    background: var(--surface); border: 1px solid var(--border);
+    box-shadow: 0 10px 40px rgba(0,0,0,.5);
+    padding: clamp(32px,6vw,64px); text-align: center;
+  }
+  .mock-eyebrow {
+    text-transform: uppercase; letter-spacing: 3px; font-size: 12px; color: var(--accent); margin-bottom: 10px;
+  }
+  .mock-banner h1 {
+    color: var(--text-heading); margin: 0 0 14px; line-height: 1.2;
+  }
+  .mock-banner p {
+    max-width: 56ch; margin: 0 auto 26px; color: var(--text-body); font-size: 16px; line-height: 1.7;
+  }
+  .mock-btn {
+    display: inline-block; background: var(--btn-grad); color: var(--text-heading);
+    text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 600;
+    padding: 14px 32px; border-radius: 999px; border: 1px solid rgba(212,163,179,.3);
+  }
+
+  .mock-cursos { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .mock-cursos .mock-eyebrow { }
+  .mock-cursos h2 { color: var(--text-heading); margin: 0 0 32px; text-transform: uppercase; }
+  .mock-cursos-list {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px;
+    list-style: none; padding: 0; margin: 0 0 32px;
+  }
+  .mock-cursos-list li {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 20px; color: var(--text-heading); font-weight: 500;
+  }
+
+  /* ---------- Grade de comparação (estática, sempre visível) ---------- */
+  .compare-section { padding: 40px 24px 100px; border-top: 1px solid var(--border); margin-top: 40px; }
+  .compare-title {
+    text-align: center; text-transform: uppercase; letter-spacing: 3px; font-size: 13px;
+    color: var(--accent); font-family: 'Plus Jakarta Sans', sans-serif; margin-bottom: 32px;
+  }
+  .compare-grid {
+    max-width: 1300px; margin: 0 auto; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px,1fr)); gap: 24px;
+  }
+  .compare-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  .compare-card-label {
+    font: 600 11px 'Plus Jakarta Sans', sans-serif; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--accent); margin-bottom: 4px;
+  }
+  .compare-card-fonts {
+    font: 12px 'Plus Jakarta Sans', sans-serif; color: var(--text-body); margin-bottom: 18px;
+  }
+  .compare-card h3 {
+    color: var(--text-heading); margin: 0 0 10px; font-size: 26px; line-height: 1.25;
+  }
+  .compare-card p {
+    color: var(--text-body); font-size: 14px; line-height: 1.6; margin: 0 0 20px;
+  }
+  .copy-btn {
+    display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+    background: var(--btn-grad); color: var(--text-heading);
+    border: 1px solid rgba(212,163,179,.3); border-radius: 999px;
+    padding: 10px 20px; font: 600 11px 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .copy-btn.copied { background: linear-gradient(135deg, #6b8f6f, #3d5940); }
+
+  @media (max-width: 700px) {
+    .controls { padding: 14px 16px; }
+    body { padding-top: 320px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="controls">
+    <span class="controls-title">Teste de Tipografia — Defendi Studio</span>
+    <div class="control-group wide">
+      <label for="comboSelect">Combinação de fontes ativa</label>
+      <select id="comboSelect">
+        <option value="0">1. Modern Luxury — Plus Jakarta Sans + Plus Jakarta Sans</option>
+        <option value="1">2. Soft Geometry — Outfit + Plus Jakarta Sans</option>
+        <option value="2">3. Titanium Precision — Sora + Outfit</option>
+        <option value="3">4. Delicate Round — Comfortaa + Plus Jakarta Sans</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="fontSize">Tamanho do título (<span id="fontSizeValue">40</span>px)</label>
+      <input type="range" id="fontSize" min="24" max="64" value="40">
+    </div>
+    <div class="control-group">
+      <label for="letterSpacing">Espaçamento entre letras (<span id="letterSpacingValue">0</span>px)</label>
+      <input type="range" id="letterSpacing" min="-2" max="10" step="0.5" value="0">
+    </div>
+    <div class="control-group wide">
+      <label for="customText">Texto de teste</label>
+      <input type="text" id="customText" value="JOIAS EXCLUSIVAS PARA VOCÊ">
+    </div>
+  </div>
+
+  <div class="showcase">
+    <div class="mock-banner" id="showcaseBanner">
+      <p class="mock-eyebrow">Defendi Studio</p>
+      <h1 id="showcaseTitle">JOIAS EXCLUSIVAS PARA VOCÊ</h1>
+      <p>Peças com a curadoria Defendi Studio para valorizar ainda mais o seu piercing.</p>
+      <span class="mock-btn">Quero Ver as Joias</span>
+    </div>
+
+    <div class="mock-cursos" id="showcaseCursos">
+      <p class="mock-eyebrow">Formação Profissional</p>
+      <h2>Nossos Cursos</h2>
+      <ul class="mock-cursos-list">
+        <li>Body Piercing Iniciante</li>
+        <li>Método Defendi Indolor</li>
+        <li>Lobuloplastia Não Cirúrgica</li>
+        <li>Furo de Bebê Humanizado</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="compare-section">
+    <p class="compare-title">Compare as 4 combinações lado a lado</p>
+    <div class="compare-grid" id="compareGrid"></div>
+  </div>
+
+<script>
+  const combos = [
+    {
+      name: '1. Modern Luxury',
+      display: "'Plus Jakarta Sans', sans-serif",
+      body: "'Plus Jakarta Sans', sans-serif",
+      label: 'Títulos: Plus Jakarta Sans · Corpo: Plus Jakarta Sans'
+    },
+    {
+      name: '2. Soft Geometry',
+      display: "'Outfit', sans-serif",
+      body: "'Plus Jakarta Sans', sans-serif",
+      label: 'Títulos: Outfit · Corpo: Plus Jakarta Sans'
+    },
+    {
+      name: '3. Titanium Precision',
+      display: "'Sora', sans-serif",
+      body: "'Outfit', sans-serif",
+      label: 'Títulos: Sora · Corpo: Outfit'
+    },
+    {
+      name: '4. Delicate Round',
+      display: "'Comfortaa', sans-serif",
+      body: "'Plus Jakarta Sans', sans-serif",
+      label: 'Títulos: Comfortaa · Corpo: Plus Jakarta Sans'
+    }
+  ];
+
+  const comboSelect = document.getElementById('comboSelect');
+  const fontSize = document.getElementById('fontSize');
+  const letterSpacing = document.getElementById('letterSpacing');
+  const customText = document.getElementById('customText');
+  const showcaseBanner = document.getElementById('showcaseBanner');
+  const showcaseCursos = document.getElementById('showcaseCursos');
+  const showcaseTitle = document.getElementById('showcaseTitle');
+
+  function applyShowcase() {
+    const combo = combos[comboSelect.value];
+    showcaseBanner.style.setProperty('--fs-display', combo.display);
+    showcaseTitle.style.fontFamily = combo.display;
+    showcaseTitle.style.fontSize = fontSize.value + 'px';
+    showcaseTitle.style.letterSpacing = letterSpacing.value + 'px';
+    showcaseTitle.textContent = customText.value || 'JOIAS EXCLUSIVAS PARA VOCÊ';
+
+    showcaseBanner.querySelectorAll('p, span').forEach(el => el.style.fontFamily = combo.body);
+    showcaseCursos.style.fontFamily = combo.body;
+    showcaseCursos.querySelector('h2').style.fontFamily = combo.display;
+    showcaseCursos.querySelectorAll('li').forEach(el => el.style.fontFamily = combo.display);
+
+    document.getElementById('fontSizeValue').textContent = fontSize.value;
+    document.getElementById('letterSpacingValue').textContent = letterSpacing.value;
+  }
+
+  [comboSelect, fontSize, letterSpacing, customText].forEach(el => {
+    el.addEventListener('input', applyShowcase);
+  });
+  applyShowcase();
+
+  // ---------- Grade de comparação estática ----------
+  const compareGrid = document.getElementById('compareGrid');
+  combos.forEach((combo, i) => {
+    const card = document.createElement('div');
+    card.className = 'compare-card';
+    card.innerHTML = `
+      <p class="compare-card-label">${combo.name}</p>
+      <p class="compare-card-fonts">${combo.label}</p>
+      <h3 style="font-family:${combo.display}">Joias Exclusivas Para Você</h3>
+      <p style="font-family:${combo.body}">Peças com a curadoria Defendi Studio para valorizar ainda mais o seu piercing.</p>
+      <button class="copy-btn" data-index="${i}">Copiar CSS da fonte</button>
+    `;
+    compareGrid.appendChild(card);
+  });
+
+  compareGrid.addEventListener('click', (e) => {
+    const btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    const combo = combos[btn.dataset.index];
+    const css = `--font-display: ${combo.display};\n--font-body: ${combo.body};`;
+    navigator.clipboard.writeText(css).then(() => {
+      const original = btn.textContent;
+      btn.textContent = 'Copiado!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1600);
+    });
+  });
+</script>
+</body>
+</html>
