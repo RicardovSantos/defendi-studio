@@ -124,6 +124,12 @@ function initCarousel(carouselSelector, trackId) {
   }
 
   function next() {
+    // Se o transitionend não disparou (aba em segundo plano, cliques rápidos),
+    // o index pode passar do limite: volta ao início antes de avançar.
+    if (index >= total) {
+      index = 0;
+      goTo(0, false);
+    }
     index++;
     goTo(index);
   }
@@ -158,6 +164,18 @@ function initCarousel(carouselSelector, trackId) {
   nextBtn.addEventListener('click', () => { next(); startAutoplay(); });
   carousel.addEventListener('mouseenter', stopAutoplay);
   carousel.addEventListener('mouseleave', startAutoplay);
+
+  // Aba em segundo plano: pausa o autoplay (as transições CSS não rodam e o
+  // carrossel andaria sem nunca voltar ao início) e reseta ao voltar.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoplay();
+    } else {
+      index = 0;
+      goTo(0, false);
+      startAutoplay();
+    }
+  });
 
   let resizeTimer;
   window.addEventListener('resize', () => {
